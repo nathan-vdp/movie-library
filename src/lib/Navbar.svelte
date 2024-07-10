@@ -1,15 +1,10 @@
 <script>
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Dropdown, DropdownItem } from 'flowbite-svelte';
 </script>
 
 <main>
 	<Navbar let:hidden let:toggle>
 		<NavBrand href="/">
-			<img
-				src="https://flowbite.com/docs/images/logo.svg"
-				class="mr-3 h-6 sm:h-9"
-				alt="Flowbite Logo"
-			/>
 			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
 				Flowbite
 			</span>
@@ -17,10 +12,12 @@
 		<NavHamburger on:click={toggle} />
 		<NavUl {hidden}>
 			<NavLi href="/" active={true}>Home</NavLi>
-			<NavLi href="/about">About</NavLi>
-			<NavLi href="/services">Services</NavLi>
-			<NavLi href="/pricing">Pricing</NavLi>
-			<NavLi href="/contact">Contact</NavLi>
+			<NavLi>Genres</NavLi>
+			<Dropdown label="Genres">
+				<DropdownItem>Action</DropdownItem>
+				<DropdownItem>Comedy</DropdownItem>
+				<DropdownItem>Drama</DropdownItem>
+			</Dropdown>
 		</NavUl>
 	</Navbar>
 </main>
