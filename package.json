@@ -33,6 +33,7 @@
   "type": "module",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "caniuse-lite": "^1.0.30001723",
     "flowbite": "^2.4.1",
     "flowbite-svelte": "^0.46.14",
     "tailwind-merge": "^2.4.0"
